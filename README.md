@@ -15,11 +15,12 @@ MiniJava appears in *Modern Compiler Implementation in Java (Second Edition)*. M
 ### JavaCC
 
 * [Documentation](https://javacc.org/doc)
-* [Tutorial 1](https://www.javaworld.com/article/2076269/learn-java/build-your-own-languages-with-javacc.html)
-* [Tutorial 2](https://dragonlanguage.wordpress.com/2016/10/10/%E4%BD%BF%E7%94%A8javacc%E5%AF%A6%E4%BE%8B-1/)
-* [Tutorial 3](https://hk.saowen.com/a/740ab16449feca3559d9a0cce9d5dd1ab6b93e69fada09372853eec4e282b5aa)
-* [Tutorial 4](https://hk.saowen.com/a/349d62eb3fd9cbb3dd5fda8b6844812cc02b0497c643b20c620169fb447a9675)
-* [Tutorial 5](http://www.blogjava.net/chenpengyi/archive/2007/01/30/96812.html)
+* [Tutorial 1](https://www.engr.mun.ca/~theo/JavaCC-Tutorial/javacc-tutorial.pdf)
+* [Tutorial 2](https://www.javaworld.com/article/2076269/learn-java/build-your-own-languages-with-javacc.html)
+* [Tutorial 3](https://dragonlanguage.wordpress.com/2016/10/10/%E4%BD%BF%E7%94%A8javacc%E5%AF%A6%E4%BE%8B-1/)
+* [Tutorial 4](https://hk.saowen.com/a/740ab16449feca3559d9a0cce9d5dd1ab6b93e69fada09372853eec4e282b5aa)
+* [Tutorial 5](https://hk.saowen.com/a/349d62eb3fd9cbb3dd5fda8b6844812cc02b0497c643b20c620169fb447a9675)
+* [Tutorial 6](http://www.blogjava.net/chenpengyi/archive/2007/01/30/96812.html)
 
 ### Github
 
