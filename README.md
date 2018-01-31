@@ -32,7 +32,7 @@ The following commands assume `java`, `javac` and `javacc` can be directly excut
 
 2. `javac *.java`
 
-3. `java Asgn1 < x` where x is the input (MiniJava program)
+3. `java Asgn1 < x` where x is the input (a MiniJava program)
 
 There are few inputs in the `tests` directory for testing. Some are from the [website](http://www.cambridge.org/resources/052182060X/MCIIJ2e/) of the textbook.
 
