@@ -1,5 +1,4 @@
 @echo off
-SET MY_PATH=%PATH%;C:\Users\AHO\Desktop\javacc-5.0\bin\
 if exist temp (
 	echo [rmdir]
 	rmdir /s /q temp
