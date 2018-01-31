@@ -45,7 +45,7 @@ There are few inputs in the `tests` directory for testing. Some are from the [we
 * [Documentation](https://javacc.org/doc) [Alternative](https://www.cs.purdue.edu/homes/hosking/javacc/doc/docindex.html)
   * [API routines](https://javacc.org/apiroutines)
   * [Grammar](https://javacc.org/javaccgrm)
-* [Tips] (https://www.cs.purdue.edu/homes/hosking/javacc/doc/lexertips.html)
+* [Tips](https://www.cs.purdue.edu/homes/hosking/javacc/doc/lexertips.html)
 * [Tutorial in pdf](https://www.engr.mun.ca/~theo/JavaCC-Tutorial/javacc-tutorial.pdf)
 * [FAQ](http://www.engr.mun.ca/~theo/JavaCC-FAQ/javacc-faq-moz.htm)
 * [Tutorial 1](https://www.javaworld.com/article/2076269/learn-java/build-your-own-languages-with-javacc.html)
