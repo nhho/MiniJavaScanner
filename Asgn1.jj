@@ -1,0 +1,125 @@
+PARSER_BEGIN(Asgn1)
+
+import java.util.ArrayList;
+import java.util.Collections;
+
+public class Asgn1 {
+
+  private static void printMsg(Token t, String msg) {
+    System.out.println("Line " + t.beginLine + ": " + msg);
+  }
+  
+  private static void printMsgF(Token t, String msg) {
+    System.out.println(msg + " (from line " + t.beginLine + ")");
+  }
+
+  private static void printList(String name, ArrayList<String> list) {
+    if (list.isEmpty()) {
+      return;
+    }
+    Collections.sort(list);
+    System.out.println(name + ":");
+    int count = 0;
+    for (int i = 0; i < list.size(); i++) {
+      if (i == 0 || !list.get(i).equals(list.get(i - 1))) {
+        if (i != 0) {
+          System.out.println(count);
+        }
+        System.out.print(list.get(i) + ": ");
+        count = 1;
+      } else {
+        count++;
+      }
+    }
+    System.out.println(count);
+  }
+
+  public static void main(String args[]) throws ParseException {
+    Asgn1 parser = new Asgn1(System.in);
+    parser.Input();
+  }
+
+}
+
+PARSER_END(Asgn1)
+
+SKIP:
+{
+  " "
+| "\t"
+| "\n"
+| "\r"
+}
+
+SPECIAL_TOKEN:
+{
+  <SINGLE_LINE_COMMENT: "//" (~["\n", "\r"])* ("\n" | "\r" | "\r\n")?>
+| <MULTI_LINE_COMMENT: "/*" (~["*"])* "*" ("*" | (~["*", "/"] (~["*"])* "*"))* "/">
+}
+
+TOKEN:
+{
+  <UNMATCHED_START_OF_COMMENT: "/*">
+| <UNMATCHED_END_OF_COMMENT: "*/">
+| <INTEGER_LITERAL: (<DECIMAL_INTEGER> | <OCTAL_INTEGER> | <HEXADECIMAL_INTEGER>)>
+| <#DECIMAL_INTEGER: ["1"-"9"] (["0"-"9"])* | "0">
+| <#OCTAL_INTEGER: "0" (["0"-"7"])+>
+| <#HEXADECIMAL_INTEGER: ("0x" | "0X") (["0"-"9", "A"-"F", "a"-"f"])+>
+| <NON_IDENTIFIER: ("class" | "{" | "public" | "static" | "void" | "main" | "(" | "String" | "[" |
+                    "]" | ")" | "}" | "extends" | ";" | "return" | "," | "int" | "boolean" | "=" |
+					"if" | "else" | "while" | "System.out.println" | "&&" | "<" | "+" | "-" | "*" |
+					"." | "length" | "true" | "false" | "this" | "new" | "!")>
+| <IDENTIFIER: <LETTER> (<LETTER> | ["0"-"9"] | "_")*>
+| <#LETTER: ["A"-"Z", "a"-"z"]>
+| <INVALID: ~[]>
+}
+
+void Input():
+{
+  Token t;
+  int error_count = 0;
+  ArrayList<String> identifier_list = new ArrayList<String>();
+  ArrayList<String> non_identifier_list = new ArrayList<String>();
+}
+{
+  (
+    t = <UNMATCHED_START_OF_COMMENT>
+    {
+      printMsgF(t, "EOF in comment");
+      return;
+    }
+|
+    t = <UNMATCHED_END_OF_COMMENT>
+    {
+      printMsg(t, "Unmatched */");
+      error_count++;
+    }
+|
+    t = <INTEGER_LITERAL>
+    {
+      printMsg(t, t.image);
+    }
+|
+    t = <NON_IDENTIFIER>
+    {
+      non_identifier_list.add(t.image);
+    }
+|
+    t = <IDENTIFIER>
+    {
+      identifier_list.add(t.image);
+    }
+|
+    t = <INVALID>
+    {
+      printMsg(t, "Invalid character '" + t.image + "'");
+      error_count++;
+    }
+  )*
+  <EOF>
+  {
+    System.out.println("Done with " + error_count + " lexing errors");
+    printList("identifier", identifier_list);
+    printList("non identifier", non_identifier_list);
+  }
+}

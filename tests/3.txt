@@ -1,0 +1,7 @@
+///////////
+/*/
+abc main
+*/
+bool@ean
+/* abc
+blahblahblah
