@@ -26,7 +26,7 @@ The grammar follows from this [reference](http://www.cs.tufts.edu/~sguyer/classe
 
 ## Usage
 
-The following commands assume `java`, `javac` and `javacc` can be directly excuted on the command line.
+The following commands assume `java`, `javac` and `javacc` can be directly excuted on the command line. If you are using Windows, you can directly excute `run.bat` to test.
 
 1. `javacc Asgn1.jj`
 
@@ -34,7 +34,7 @@ The following commands assume `java`, `javac` and `javacc` can be directly excut
 
 3. `java Asgn1 < x` where x is the input (MiniJava program)
 
-There are few inputs in the `tests` directory for testing. If you are using Windows, you can directly excute `run.bat` to test.
+There are few inputs in the `tests` directory for testing. Some are from the [website](http://www.cambridge.org/resources/052182060X/MCIIJ2e/) of the textbook.
 
 ## Useful Links
 
