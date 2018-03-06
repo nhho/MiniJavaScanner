@@ -39,6 +39,7 @@ There are few inputs in the `tests` directory for testing. Some are from the [we
 ## Useful Links
 
 * [Sample soultions](http://www.cambridge.org/resources/052182060X/lecturers/default.htm)
+* [Java BNF](https://users-cs.au.dk/amoeller/RegAut/JavaBNF.html)
 
 ### JavaCC
 
