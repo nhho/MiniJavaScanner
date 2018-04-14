@@ -40,6 +40,7 @@ There are few inputs in the `tests` directory for testing. Some are from the [we
 
 * [Sample soultions](http://www.cambridge.org/resources/052182060X/lecturers/default.htm)
 * [Java BNF](https://users-cs.au.dk/amoeller/RegAut/JavaBNF.html)
+* [Java method resolving](https://docs.oracle.com/javase/specs/jls/se7/html/jls-15.html#jls-15.12.2.5)
 
 ### JavaCC
 
